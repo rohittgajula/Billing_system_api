@@ -7,6 +7,8 @@ from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
 schema_view = get_schema_view(
    openapi.Info(
       title="Billing System.",
@@ -28,3 +30,5 @@ urlpatterns = [
     path("api/token/", TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path("api/token/refresh/", TokenRefreshView.as_view(), name='token_refresh'),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
