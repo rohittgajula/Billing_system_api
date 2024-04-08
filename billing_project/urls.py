@@ -13,7 +13,7 @@ schema_view = get_schema_view(
    openapi.Info(
       title="Billing System.",
       default_version='v1',
-      description="",
+      description="Login Credentials username : admin, password : 0000, for token authentication add Bearer : <add access token here>>",
    ),
    public=True,
    permission_classes=(permissions.AllowAny,),
